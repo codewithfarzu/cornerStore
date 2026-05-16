@@ -17,7 +17,7 @@ const SearchBar = () => {
             const count = await getCartCount(email);
             setCartCount(count);
         }
-    },[isSignedIn, user]);
+    }, [isSignedIn, user]);
 
     // Fetch on login
     useEffect(() => {
@@ -66,7 +66,7 @@ const SearchBar = () => {
                         <ul>
                             <li className="Dropdown flex items-center gap-1"><GoPersonFill />&#9013;
                                 <div className="drop-content absolute bg-white text-neutral-600 w-33 content-center pt-0 py-0 inset-ring-1 inset-ring-neutral-300 rounded-[3px] h-0 top-7 -right-23 overflow-hidden">
-                                    <SignedOut >
+                                    <SignedOut>
                                         <SignInButton mode="modal">
                                             <button className="block mx-auto cursor-pointer hover:text-orange-500 duration-500 ease-in">
                                                 Log in
