@@ -1,11 +1,12 @@
 import postgres from 'postgres'
 
 const sql = postgres({
-    host:                  'process.env.DB_aws-1-ap-south-1.pooler.supabase.com',            
-    port:                   Number(process.env.DB_5432),     
-    database:              'process.env.DB_postgres',           
-    username:              'process.env.DB_postgres.ukxureomutojxzuyftvh',            
-    password:              'process.env.DB_Asansol@12farzan',
-    max:                    1, //limit connections per serverless function
+    host: process.env.DB_HOST!,
+    port: Number(process.env.DB_PORT),
+    database: process.env.DB_NAME!,
+    username: process.env.DB_USER!,
+    password: process.env.DB_PASSWORD!,
+    max: 1,
 });
+
 export default sql;
