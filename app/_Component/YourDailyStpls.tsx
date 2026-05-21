@@ -13,8 +13,13 @@ const YourDailyStpls = () => {
 
     useEffect(() => {
         const product = async () => {
-            const res = await fetchData();
-            setProducts(res);
+            try {
+                const res = await fetchData();
+                console.log("Products fetched:", res);
+                setProducts(res);
+            } catch (err) {
+                console.error("fetchData error:", err);
+            }
         }
         product();
     }, []);
