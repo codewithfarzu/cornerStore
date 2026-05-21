@@ -6,7 +6,7 @@ const sql = postgres({
     database: process.env.DB_NAME!,
     username: process.env.DB_USER!,
     password: process.env.DB_PASSWORD!,
-    max: 1,
+    // max: 1,
     ssl: 'require',
     prepare: false,   // required for Supabase transaction pooler
 });
